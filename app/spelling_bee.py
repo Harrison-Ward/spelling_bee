@@ -50,7 +50,7 @@ def api():
         raise ValueError("Invalid input: Center letter not included in letters.")
 
     if not isinstance(letters, str):
-        raise ValueError('Invalid input: Not all letters are of type string.')
+        raise TypeError('Invalid input: Not all letters are of type string.')
 
     if len(letters) != 7:
         raise ValueError(
