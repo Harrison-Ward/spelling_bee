@@ -20,7 +20,7 @@ def is_valid_subset(super_set, sub_set, center_letter):
 
 def dict_parser(letters, center_letter):
     super_set = set(letters)
-    words = load_words_from_file("alt_words.txt")
+    words = load_words_from_file("dictionary/alt_words.txt")
     candidates = []
 
     # loop through words and check our conditions, add to list if met
