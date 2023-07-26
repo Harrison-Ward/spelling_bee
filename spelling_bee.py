@@ -43,7 +43,18 @@ def api():
         letters += input(f"Input Letter {i + 1}: ")
 
     # clarify which letter is today's letter
-    center_letter = input(f"Center Letter: ")
+    center_letter = input("Center Letter: ")
+
+    # add checks to user input
+    if center_letter not in letters:
+        raise ValueError("Invalid input: Center letter not included in letters.")
+
+    if not isinstance(letters, str):
+        raise ValueError('Invalid input: Not all letters are of type string.')
+
+    if len(letters) != 7:
+        raise ValueError(
+            f'Invalid input: Incorrect number of letters input, {len(letters)}, correct length is 7.')
 
     return center_letter, letters
 
